@@ -491,6 +491,10 @@ section:not(.about):not(.contact) .section-description {
   display: block;
 }
 
+#first-subtitle{
+  color: var(--title-color);
+}
+
 .portfolio-description {
   display: block;
   color: var(--body-color);

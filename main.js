@@ -71,6 +71,24 @@ tabs.forEach((tab) => {
   });
 });
 
+// Wake up Backend (Despierto el servidor en segundo plano)
+const wakeupBackend = async () => {
+  try {
+    const healthUrl = isLocal
+        ? "http://localhost:8080/api/v1/contactos/health"
+        : "https://portfolio-backend-bjsa.onrender.com/api/v1/contactos/health";
+
+    // Uso fetch normal, si el servidor está dormido, aquí empezará a arrancar
+    fetch(healthUrl);
+    console.log("Señal de activación enviada al backend...");
+  } catch (e) {
+    // Error silencioso
+  }
+};
+
+// Se ejecuta inmediatamente al cargar el script
+wakeupBackend();
+
 // Detectar si estamos en local o en producción
 const isLocal = window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1";
 
