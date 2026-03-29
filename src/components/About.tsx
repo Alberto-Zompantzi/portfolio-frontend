@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState, type FC, type ReactNode } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion, AnimatePresence } from 'framer-motion';
 import { 
@@ -11,7 +11,7 @@ import './About.css';
  * About component with tabbed content for Skills, Experience, Education, and Certifications.
  * Uses Framer Motion for smooth tab transitions.
  */
-const About: React.FC = () => {
+const About: FC = () => {
   const { t } = useTranslation();
   const [activeTab, setActiveTab] = useState('skills');
 
@@ -121,7 +121,7 @@ const About: React.FC = () => {
   );
 };
 
-const SkillItem: React.FC<{ icon: React.ReactNode; title: string; desc: string }> = ({ icon, title, desc }) => (
+const SkillItem: FC<{ icon: ReactNode; title: string; desc: string }> = ({ icon, title, desc }) => (
   <div className="skill-item">
     <div className="skill-header">
       {icon}
@@ -131,7 +131,7 @@ const SkillItem: React.FC<{ icon: React.ReactNode; title: string; desc: string }
   </div>
 );
 
-const ExperienceItem: React.FC<{ title: string; subtitle: string; link: string; desc: string; viewProject: string }> = ({ title, subtitle, link, desc, viewProject }) => (
+const ExperienceItem: FC<{ title: string; subtitle: string; link: string; desc: string; viewProject: string }> = ({ title, subtitle, link, desc, viewProject }) => (
   <div className="experience-item">
     <div className="exp-header">
       <h4>{title}</h4>
@@ -142,7 +142,7 @@ const ExperienceItem: React.FC<{ title: string; subtitle: string; link: string; 
   </div>
 );
 
-const CertItem: React.FC<{ icon: React.ReactNode; title: string; desc: string }> = ({ icon, title, desc }) => (
+const CertItem: FC<{ icon: ReactNode; title: string; desc: string }> = ({ icon, title, desc }) => (
   <div className="cert-item">
     <div className="cert-header">
       {icon}

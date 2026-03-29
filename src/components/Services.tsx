@@ -1,4 +1,4 @@
-import React from 'react';
+import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { 
@@ -10,7 +10,7 @@ import './Services.css';
  * Services component showcasing specialized technical offerings.
  * Uses Lucide icons and Framer Motion for scroll animations.
  */
-const Services: React.FC = () => {
+const Services: FC = () => {
   const { t } = useTranslation();
 
   const services = [

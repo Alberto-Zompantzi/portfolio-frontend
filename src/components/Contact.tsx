@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import { useState, useRef, type FC, type ChangeEvent, type FormEvent } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Send, Loader2, Mail, MessageCircle } from 'lucide-react';
@@ -10,7 +10,7 @@ import './Contact.css';
  * Contact component with backend persistence and EmailJS delivery.
  * Implements form validation and feedback during the sending process.
  */
-const Contact: React.FC = () => {
+const Contact: FC = () => {
   const { t } = useTranslation();
   const formRef = useRef<HTMLFormElement>(null);
   const [isSending, setIsSending] = useState(false);
@@ -23,11 +23,11 @@ const Contact: React.FC = () => {
     mensaje: '',
   });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
     // 1. Validation

@@ -1,4 +1,4 @@
-import React from 'react';
+import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import './Hero.css';
@@ -7,7 +7,7 @@ import './Hero.css';
  * Hero component with brand-colored icons and profile photo.
  * Uses Framer Motion for entry animations.
  */
-const Hero: React.FC = () => {
+const Hero: FC = () => {
   const { t } = useTranslation();
 
   const stackIcons = [

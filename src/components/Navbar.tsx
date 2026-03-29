@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect, type FC } from "react";
 import { useTranslation } from "react-i18next";
 import {
   Menu,
@@ -15,7 +15,7 @@ import "./Navbar.css";
  * Navbar component with internationalization, social links, and CV download.
  * Implements a responsive mobile menu and scroll-based background change.
  */
-const Navbar: React.FC = () => {
+const Navbar: FC = () => {
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);

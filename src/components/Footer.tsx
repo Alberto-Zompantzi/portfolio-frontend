@@ -1,4 +1,4 @@
-import React from 'react';
+import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Github, Linkedin, MessageSquare } from 'lucide-react';
 import './Footer.css';
@@ -6,7 +6,7 @@ import './Footer.css';
 /**
  * Footer component with brand logo, social links, and copyright information.
  */
-const Footer: React.FC = () => {
+const Footer: FC = () => {
   const { t } = useTranslation();
 
   return (

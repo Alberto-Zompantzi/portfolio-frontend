@@ -1,4 +1,4 @@
-import React from 'react';
+import { type FC } from 'react';
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import { Github, ExternalLink } from 'lucide-react';
@@ -8,7 +8,7 @@ import './Projects.css';
  * Projects section with dynamic translation and Framer Motion hover effects.
  * Displays highlighted projects with their tech stack and links.
  */
-const Projects: React.FC = () => {
+const Projects: FC = () => {
   const { t } = useTranslation();
 
   const projects = [
