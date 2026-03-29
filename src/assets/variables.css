@@ -1,0 +1,38 @@
+:root {
+  --body-font: "Poppins", sans-serif;
+  --second-font: "Montserrat", sans-serif;
+
+  --header-height: 6rem;
+
+  --weight-300: 300;
+  --weight-400: 400;
+  --weight-500: 500;
+  --weight-600: 600;
+  --weight-700: 700;
+  --weight-900: 900;
+
+  --big-font-size: clamp(2rem, 0.9706rem + 4.7059vw, 4.5rem);
+  --h1-font-size: clamp(1.75rem, 0.9265rem + 3.7647vw, 3.75rem);
+  --h2-font-size: 1.75rem;
+  --h3-font-size: 1.5rem;
+  --normal-font-size: 1.125rem;
+  --small-font-size: 1rem;
+  --smaller-font-size: 0.875rem;
+
+  --body-color: hsl(0, 0%, 6%);
+  --border-color: hsl(0, 0%, 100%, 0.2);
+  --container-color: hsl(0, 0%, 10%);
+  --first-color: hsl(265, 85%, 62%);
+  --mint: hsl(109, 25%, 71%);
+  --orange-strong: hsl(33, 100%, 50%);
+  --orange: hsl(25, 91%, 71%);
+  --text-color: hsl(0, 0%, 77%);
+  --title-color: hsl(0, 0%, 100%);
+
+  --transition: cubic-bezier(0.05, 0.2, 0.1, 1);
+
+  --border-radius: 0.5rem;
+
+  --z-fixed: 100;
+  --z-tooltip: 10;
+}

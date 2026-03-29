@@ -1,0 +1,128 @@
+/* Base/Mobile styles */
+.home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 8rem 4rem;
+  background-color: var(--body-color);
+}
+
+.home-container {
+  grid-template-columns: 1fr;
+  text-align: center;
+  row-gap: 2rem;
+  display: grid;
+}
+
+.home-content {
+  order: 2;
+}
+
+.home-subtitle {
+  display: block;
+  font-size: var(--small-font-size);
+  color: var(--mint);
+  font-family: var(--body-font);
+  font-weight: var(--weight-400);
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  margin-bottom: 1.25rem;
+}
+
+.home-title {
+  font-family: var(--second-font);
+  font-size: var(--h1-font-size);
+  font-weight: var(--weight-900);
+  line-height: 1.2;
+}
+
+.home-title span {
+  color: var(--first-color);
+}
+
+.home-stack-text {
+  font-size: var(--h3-font-size);
+  color: #fff;
+}
+
+.home-social-stack {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.stack-icon-wrapper {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.home-img-wrapper {
+  display: flex;
+  justify-content: center;
+  order: 1;
+}
+
+.profile-photo {
+  width: 260px;
+  height: 260px;
+  object-fit: cover;
+  object-position: center top;
+  border: 0.5rem solid var(--container-color);
+  border-radius: 50%;
+  margin-inline: auto;
+  opacity: 0.9;
+  transition: 0.4s;
+}
+
+/* Breakpoints */
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+  .profile-photo {
+    width: 280px;
+    height: 280px;
+  }
+
+  .stack-icon-wrapper {
+    font-size: 2.5rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+  .home {
+    padding-block: 0;
+  }
+
+  .profile-photo {
+    width: 320px;
+    height: 320px;
+  }
+}
+
+/* Extra large devices (desktops, 1200px and up) */
+@media screen and (min-width: 1200px) {
+  .home {
+    padding-block: 0;
+  }
+
+  .home-container {
+    grid-template-columns: 7fr 5fr;
+    align-items: center;
+    text-align: initial;
+  }
+
+  .home-social-stack {
+    justify-content: initial;
+  }
+
+  .profile-photo {
+    width: 425px;
+    height: 425px;
+    margin-left: auto;
+    margin-right: initial;
+  }
+}

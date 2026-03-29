@@ -1,0 +1,115 @@
+@import "./assets/variables.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body,
+input,
+textarea {
+  color: var(--text-color);
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: var(--weight-300);
+}
+
+body {
+  background-color: var(--body-color);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  color: var(--title-color);
+  font-weight: var(--weight-700);
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  line-height: 1.67em;
+}
+
+img {
+  max-width: 100%;
+}
+
+input,
+textarea {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+
+/* Reusable classes */
+.container {
+  margin-inline: auto;
+  max-width: 1260px;
+  padding-inline: 1.5rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.section {
+  padding-block: 4rem 2rem;
+}
+
+.section-title {
+  font-size: var(--h1-font-size);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.section-description {
+  margin-bottom: 3rem;
+  text-align: center;
+  max-width: 600px;
+  margin-inline: auto;
+}
+
+.btn {
+  display: inline-block;
+  background-color: var(--first-color);
+  color: var(--title-color);
+  padding: 1rem 1.75rem;
+  border-radius: var(--border-radius);
+  font-weight: var(--weight-600);
+  transition: 0.3s;
+  cursor: pointer;
+  border: none;
+}
+
+.btn:hover {
+  background-color: hsl(265, 85%, 55%);
+}
+
+/* Breakpoints */
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+  .section {
+    padding-block: 6rem 3rem;
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (min-width: 992px) {
+  .container {
+    padding-inline: 0.75rem;
+  }
+}
