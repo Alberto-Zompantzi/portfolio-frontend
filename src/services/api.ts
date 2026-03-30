@@ -12,11 +12,11 @@ export const api = axios.create({
 
 export const wakeupBackend = async () => {
   try {
-    const healthUrl = `${API_BASE_URL}/api/v1/contactos/health`;
-    await fetch(healthUrl);
-    console.log('Wake-up signal sent to backend...');
+    // Usamos la instancia de axios configurada para que los headers sean consistentes
+    await api.get('/contactos/health');
+    console.log('Backend wake-up signal sent successfully.');
   } catch (e) {
-    // Silent error
+    // Silent error: si falla el GET, Render igual recibe el tráfico y despierta
   }
 };
 

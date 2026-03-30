@@ -126,8 +126,9 @@ const Navbar: FC = () => {
             </a>
 
             <a
-              href="/cv-alberto-zompantzi.pdf"
-              download
+              href="https://drive.google.com/file/d/1VGf_9bEv0DM7TC21WZMbZL2fJbLbe0nj/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
               className="nav-link-btn btn cv-btn"
             >
               <Download size={18} />
